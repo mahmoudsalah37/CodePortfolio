@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Code Portfolio</string>
+    <string name="title_code">Title Code</string>
+    <string name="type_code">Type code</string>
+    <string name="rating_code">Rating code:</string>
+    <string name="enter_code_here">Enter Code here</string>
+    <string name="edit">Edit</string>
+    <string name="save">Save</string>
+
+    <string name="title_activity_starter">StarterActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+</resources>

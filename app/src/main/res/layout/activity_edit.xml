@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layoutDirection="ltr"
+    tools:context=".EditActivity">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/titleCode_TextInputLayout_editAct"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toStartOf="@+id/typeCode_TextInputLayout_editAct"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/titleCode_EditText"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:focusable="false"
+                android:hint="@string/title_code"
+                android:maxLength="40"
+                android:maxLines="2" />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/typeCode_TextInputLayout_editAct"
+            android:layout_width="103dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/typeCode_EditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:focusable="false"
+                android:hint="@string/type_code"
+                android:maxLength="15"
+                android:maxLines="2" />
+        </android.support.design.widget.TextInputLayout>
+
+        <TextView
+            android:id="@+id/enterCode_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="12dp"
+            android:text="@string/rating_code"
+            android:textSize="24sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/titleCode_TextInputLayout_editAct" />
+
+        <ImageView
+            android:id="@+id/rationImage_ImageView_editAct"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="12dp"
+            app:layout_constraintStart_toEndOf="@+id/enterCode_textView"
+            app:layout_constraintTop_toTopOf="@+id/ratingCode_SmileRating_editAct"
+            app:srcCompat="@android:drawable/presence_offline" />
+
+        <com.hsalf.smilerating.SmileRating
+            android:id="@+id/ratingCode_SmileRating_editAct"
+            android:layout_width="163dp"
+            android:layout_height="42dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:visibility="gone"
+            app:layout_constraintStart_toEndOf="@+id/enterCode_textView"
+            app:layout_constraintTop_toBottomOf="@+id/titleCode_TextInputLayout_editAct" />
+
+        <EditText
+            android:id="@+id/inputCode_editText_editAct"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:background="@color/white"
+            android:ems="10"
+            android:focusable="false"
+            android:hint="@string/enter_code_here"
+            android:inputType="textMultiLine"
+            android:scrollbars="vertical"
+            android:textColorHint="@color/colorPrimaryDark"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/enterCode_textView"
+            app:layout_constraintVertical_bias="0.011" />
+
+        <ImageView
+            android:id="@+id/copy_imageView_actEdit"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginEnd="8dp"
+            android:onClick="copyCode"
+            android:src="@drawable/ic_content_copy_black_24dp"
+            app:layout_constraintBottom_toBottomOf="@+id/inputCode_editText_editAct"
+            app:layout_constraintEnd_toEndOf="@+id/inputCode_editText_editAct" />
+    </android.support.constraint.ConstraintLayout>
+</ScrollView>
