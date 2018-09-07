@@ -16,6 +16,7 @@ public class StarterActivity extends AppCompatActivity {
             public void run() {
                 // yourMethod();
                 startActivity(new Intent(StarterActivity.this, MainActivity.class));
+                finish();
             }
         }, 3000);
     }
